@@ -1,3 +1,13 @@
+<!-- 添加 MathJax 配置 -->
+<script>
+  MathJax = {
+    tex: {
+      inlineMath: [['$', '$'], ['\$', '\$']], // 启用 $ 和 $ 作为行内分隔符
+      displayMath: [['$$', '$$'], ['\$$', '\$$']] // 行间公式分隔符（可选）
+    }
+  };
+</script>
 
+<!-- 原有内容保持不变 -->
 <script async src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
 <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
