@@ -5,4 +5,4 @@ title: "Catalan数、Dyck路和Bertrand投票问题"
 categories: 随笔
 ---
 
-先留个档
+事先声明，没有
