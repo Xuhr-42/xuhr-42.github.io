@@ -1,7 +1,7 @@
 ---
 layout: page
 math: true
-title: About
+title: 关于
 permalink: /about/
 ---
 
