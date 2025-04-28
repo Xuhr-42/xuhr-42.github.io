@@ -1,7 +1,6 @@
 title: 数学随笔
 description: 正在施工中
 author: Xu Haoran
-locate: Shanghai
 avatar: /logo.jpg
 email: xuhr314@gmail.com
 
@@ -32,7 +31,5 @@ exclude:
 # =========================
 
 logo: logo.jpg
-social:
-  name: Shangzhi Huang
-google_site_verification: u4WXQl0Eu66rsQo2kRdCNx
+
 lang: zh
