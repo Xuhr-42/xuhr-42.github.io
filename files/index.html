@@ -1,0 +1,24 @@
+---
+layout: default
+title: Files
+description: Papers, slides, notes, and other downloadable files from Haoran Xu.
+---
+<section class="page-intro">
+  <p class="eyebrow"><span data-copy="en">Archive</span><span data-copy="zh">资料库</span></p>
+  <h1><span data-copy="en">Files & resources</span><span data-copy="zh">文件与资料</span></h1>
+  <p><span data-copy="en">Papers, slides, lecture notes, and supporting material.</span><span data-copy="zh">论文、幻灯片、讲义以及相关材料。</span></p>
+</section>
+<section class="file-list">
+  {% if site.data.files.size > 0 %}
+    {% for file in site.data.files %}
+    <a class="file-row" href="{{ file.path | relative_url }}">
+      <span class="file-type">{{ file.type | default: "FILE" }}</span>
+      <span class="file-info"><strong><span data-copy="en">{{ file.title_en }}</span><span data-copy="zh">{{ file.title_zh }}</span></strong><small>{{ file.date }} · {{ file.size }}</small></span>
+      <span aria-hidden="true">↓</span>
+    </a>
+    {% endfor %}
+  {% else %}
+    <div class="empty-state"><span>∅</span><h2><span data-copy="en">The archive is being prepared.</span><span data-copy="zh">资料库正在整理中。</span></h2><p><span data-copy="en">Downloads will appear here as they are published.</span><span data-copy="zh">公开的论文、讲义与幻灯片会陆续出现在这里。</span></p></div>
+  {% endif %}
+</section>
+
