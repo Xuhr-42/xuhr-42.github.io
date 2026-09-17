@@ -1,0 +1,24 @@
+---
+layout: default
+---
+<article class="article-shell">
+  <a class="back-link" href="{{ '/blog/' | relative_url }}">
+    <span data-copy="en">← Back to notes</span>
+    <span data-copy="zh">← 返回随笔</span>
+  </a>
+  <header class="article-header">
+    <p class="eyebrow">{{ page.date | date: "%Y · %m · %d" }}</p>
+    <h1>
+      <span data-copy="en">{{ page.title_en | default: page.title }}</span>
+      <span data-copy="zh">{{ page.title_zh | default: page.title }}</span>
+    </h1>
+    {% if page.summary_en or page.summary_zh %}
+    <p class="article-summary">
+      <span data-copy="en">{{ page.summary_en }}</span>
+      <span data-copy="zh">{{ page.summary_zh }}</span>
+    </p>
+    {% endif %}
+  </header>
+  <div class="prose">{{ content }}</div>
+</article>
+
