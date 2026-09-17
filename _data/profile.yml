@@ -1,0 +1,17 @@
+items:
+  - label_en: Institution
+    label_zh: 学校
+    value_en: East China Normal University
+    value_zh: 华东师范大学
+  - label_en: Field
+    label_zh: 专业
+    value_en: Mathematics
+    value_zh: 数学
+  - label_en: Current interest
+    label_zh: 当前兴趣
+    value_en: Extremal graph theory
+    value_zh: 极值图论
+  - label_en: GitHub
+    label_zh: GitHub
+    value_en: Xuhr-42
+    value_zh: Xuhr-42
