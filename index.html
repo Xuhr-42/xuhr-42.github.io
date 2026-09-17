@@ -1,81 +1,60 @@
 ---
 layout: default
 title: Home
-description: Academic homepage of Haoran Xu — graph theory, mathematics, and research notes.
+description: Academic homepage of Haoran Xu, a mathematics undergraduate currently studying extremal graph theory.
 ---
-<section class="hero">
-  <div class="hero-copy">
-    <p class="eyebrow">
-      <span data-copy="en">Mathematics · Graph Theory</span>
-      <span data-copy="zh">数学 · 图论</span>
-    </p>
-    <h1>
-      <span data-copy="en">Hello, I’m<br>Haoran Xu.</span>
-      <span data-copy="zh">你好，我是<br>Haoran Xu。</span>
-    </h1>
-    <p class="hero-intro">
-      <span data-copy="en">I am a mathematics student at East China Normal University. My interests center on extremal graph theory, with broader curiosity about algebraic and spectral methods in combinatorics.</span>
-      <span data-copy="zh">我在华东师范大学学习数学，主要兴趣是极值图论，同时关注组合数学中的代数方法与谱方法。</span>
-    </p>
-    <div class="hero-actions">
-      <a class="button button-primary" href="#research"><span data-copy="en">Research interests</span><span data-copy="zh">研究兴趣</span></a>
-      <a class="button button-secondary" href="{{ '/blog/' | relative_url }}"><span data-copy="en">Read my notes</span><span data-copy="zh">阅读随笔</span></a>
-    </div>
-  </div>
-  <div class="hero-graphic" aria-hidden="true">
-    <div class="orbit orbit-one"></div>
-    <div class="orbit orbit-two"></div>
-    <div class="graph-node node-a"></div>
-    <div class="graph-node node-b"></div>
-    <div class="graph-node node-c"></div>
-    <div class="graph-node node-d"></div>
-    <div class="graph-line line-a"></div>
-    <div class="graph-line line-b"></div>
-    <div class="graph-line line-c"></div>
-    <span class="formula">ex(n, H)</span>
+<section class="profile-intro">
+  <p class="eyebrow">
+    <span data-copy="en">Mathematics undergraduate</span>
+    <span data-copy="zh">数学本科生</span>
+  </p>
+  <h1>Haoran Xu</h1>
+  <p class="profile-summary">
+    <span data-copy="en">I am an undergraduate student in mathematics at East China Normal University. I am currently learning extremal graph theory and beginning to explore related problems.</span>
+    <span data-copy="zh">我是华东师范大学数学专业本科生，目前正在学习极值图论，并开始接触相关问题。</span>
+  </p>
+  <div class="profile-links">
+    <a href="{{ '/blog/' | relative_url }}"><span data-copy="en">Notes</span><span data-copy="zh">随笔</span></a>
+    <a href="{{ '/files/' | relative_url }}"><span data-copy="en">Files</span><span data-copy="zh">文件</span></a>
+    <a href="https://github.com/Xuhr-42">GitHub ↗</a>
   </div>
 </section>
 
-<section id="research" class="section-grid">
-  <div>
-    <p class="eyebrow"><span data-copy="en">Research</span><span data-copy="zh">研究</span></p>
-    <h2><span data-copy="en">Questions about structure, density, and symmetry.</span><span data-copy="zh">关于结构、密度与对称性的问题。</span></h2>
+<section id="research" class="content-section">
+  <div class="section-label">
+    <p class="eyebrow"><span data-copy="en">Current interest</span><span data-copy="zh">当前兴趣</span></p>
   </div>
-  <div class="research-list">
-    <article>
-      <span class="item-number">01</span>
-      <div><h3><span data-copy="en">Extremal graph theory</span><span data-copy="zh">极值图论</span></h3><p><span data-copy="en">Forbidden subgraphs, exact extremal numbers, stability, and extremal constructions.</span><span data-copy="zh">禁图问题、精确极值数、稳定性方法与极图构造。</span></p></div>
-    </article>
-    <article>
-      <span class="item-number">02</span>
-      <div><h3><span data-copy="en">Algebraic & spectral graph theory</span><span data-copy="zh">代数图论与谱图论</span></h3><p><span data-copy="en">Using algebraic invariants and eigenvalues to understand combinatorial structure.</span><span data-copy="zh">利用代数不变量与特征值理解图的组合结构。</span></p></div>
-    </article>
-    <article>
-      <span class="item-number">03</span>
-      <div><h3><span data-copy="en">Computation and formal methods</span><span data-copy="zh">计算与形式化方法</span></h3><p><span data-copy="en">Small-scale experimentation, reproducible computation, and proof verification.</span><span data-copy="zh">小规模实验、可复现计算以及证明的形式化验证。</span></p></div>
-    </article>
+  <div class="section-body">
+    <h2><span data-copy="en">Extremal graph theory</span><span data-copy="zh">极值图论</span></h2>
+    <p>
+      <span data-copy="en">I am learning the basic methods of extremal graph theory, with particular interest in forbidden-subgraph problems and extremal constructions. This page will be updated as my study develops.</span>
+      <span data-copy="zh">我正在学习极值图论的基本方法，目前主要关注禁图问题和极值构造。这里会随着学习的推进逐步更新。</span>
+    </p>
   </div>
 </section>
 
-<section class="latest-section">
-  <div class="section-heading">
-    <div><p class="eyebrow"><span data-copy="en">Notebook</span><span data-copy="zh">开放笔记</span></p><h2><span data-copy="en">Latest notes</span><span data-copy="zh">最近随笔</span></h2></div>
-    <a href="{{ '/blog/' | relative_url }}"><span data-copy="en">View all</span><span data-copy="zh">查看全部</span> →</a>
+<section class="content-section notes-section">
+  <div class="section-label">
+    <p class="eyebrow"><span data-copy="en">Recent notes</span><span data-copy="zh">最近随笔</span></p>
   </div>
-  <div class="note-grid">
+  <div class="section-body">
     {% for post in site.posts limit: 3 %}
-      <a class="note-card" href="{{ post.url | relative_url }}">
+      <a class="simple-note" href="{{ post.url | relative_url }}">
+        <div>
+          <h2><span data-copy="en">{{ post.title_en | default: post.title }}</span><span data-copy="zh">{{ post.title_zh | default: post.title }}</span></h2>
+          <p><span data-copy="en">{{ post.summary_en }}</span><span data-copy="zh">{{ post.summary_zh }}</span></p>
+        </div>
         <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%Y.%m.%d" }}</time>
-        <h3><span data-copy="en">{{ post.title_en | default: post.title }}</span><span data-copy="zh">{{ post.title_zh | default: post.title }}</span></h3>
-        <p><span data-copy="en">{{ post.summary_en }}</span><span data-copy="zh">{{ post.summary_zh }}</span></p>
-        <span class="card-arrow" aria-hidden="true">↗</span>
       </a>
     {% endfor %}
+    <a class="text-link" href="{{ '/blog/' | relative_url }}"><span data-copy="en">All notes</span><span data-copy="zh">全部随笔</span> →</a>
   </div>
 </section>
 
-<section class="contact-strip">
-  <div><p class="eyebrow"><span data-copy="en">Contact</span><span data-copy="zh">联系</span></p><h2><span data-copy="en">For mathematical conversations and collaboration.</span><span data-copy="zh">欢迎就数学问题与合作进行交流。</span></h2></div>
-  <a class="button button-light" href="https://github.com/Xuhr-42">GitHub ↗</a>
+<section class="compact-contact">
+  <p>
+    <span data-copy="en">This site collects my notes and publicly shared materials.</span>
+    <span data-copy="zh">这里用于整理我的学习笔记和公开资料。</span>
+  </p>
+  <a href="{{ '/files/' | relative_url }}"><span data-copy="en">Browse files</span><span data-copy="zh">查看文件</span> →</a>
 </section>
-
