@@ -1,0 +1,12 @@
+title: Haoran Xu
+description: Mathematics student interested in extremal and algebraic graph theory.
+url: "https://xuhr-42.github.io"
+baseurl: ""
+lang: en
+timezone: Asia/Shanghai
+markdown: kramdown
+permalink: /blog/:year/:month/:day/:title/
+exclude:
+  - README.md
+  - LICENSE
+
