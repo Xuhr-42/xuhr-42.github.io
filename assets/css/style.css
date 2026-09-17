@@ -109,21 +109,25 @@ main { min-height: calc(100vh - 160px); }
 .profile-intro {
   width: min(calc(100% - 40px), var(--max));
   margin: 0 auto;
-  padding: 6.2rem 0 5rem;
+  padding: 4.8rem 0 4rem;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 310px;
+  gap: 4.5rem;
+  align-items: start;
 }
 .profile-intro h1 {
   margin: 0;
   font-family: Georgia, "Times New Roman", "Noto Serif SC", serif;
-  font-size: clamp(3.1rem, 7vw, 5.4rem);
-  line-height: 1.05;
-  letter-spacing: -.04em;
+  font-size: clamp(2.15rem, 4vw, 3rem);
+  line-height: 1.15;
+  letter-spacing: -.025em;
   font-weight: 500;
 }
 .profile-summary {
-  max-width: 700px;
-  margin: 1.7rem 0 0;
+  max-width: 560px;
+  margin: 1.15rem 0 0;
   color: var(--muted);
-  font-size: 1.12rem;
+  font-size: 1.02rem;
   line-height: 1.8;
 }
 .profile-links {
@@ -138,6 +142,32 @@ main { min-height: calc(100vh - 160px); }
   font-weight: 650;
 }
 .profile-links a:hover, .text-link:hover, .compact-contact a:hover { text-decoration: underline; }
+
+.profile-card {
+  padding: 1.35rem 1.45rem;
+  background: var(--white);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+}
+.profile-card h2 {
+  margin: 0 0 .8rem;
+  font-size: .78rem;
+  line-height: 1.2;
+  font-weight: 750;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  color: var(--accent);
+}
+.profile-card dl { margin: 0; }
+.profile-card dl > div {
+  display: grid;
+  grid-template-columns: 92px 1fr;
+  gap: .7rem;
+  padding: .62rem 0;
+  border-top: 1px solid var(--line);
+}
+.profile-card dt { color: var(--muted); font-size: .78rem; }
+.profile-card dd { margin: 0; font-size: .86rem; font-weight: 600; }
 
 .content-section {
   width: min(calc(100% - 40px), var(--max));
@@ -291,7 +321,8 @@ main { min-height: calc(100vh - 160px); }
     box-shadow: 0 12px 32px rgba(23, 32, 51, .1);
   }
   .site-nav.is-open { display: flex; }
-  .profile-intro { padding: 4.5rem 0 3.7rem; }
+  .profile-intro { padding: 3.8rem 0 3.2rem; grid-template-columns: 1fr; gap: 2.5rem; }
+  .profile-card { max-width: 440px; }
   .content-section { grid-template-columns: 1fr; gap: .5rem; padding: 2.5rem 0; }
   .section-label { padding: 0; }
   .simple-note { flex-direction: column; gap: .6rem; }
@@ -305,7 +336,7 @@ main { min-height: calc(100vh - 160px); }
 @media (max-width: 440px) {
   .site-header, .profile-intro, .content-section, .compact-contact, .page-intro, .post-list, .file-list, .site-footer { width: min(calc(100% - 28px), var(--max)); }
   .brand-name { display: none; }
-  .profile-intro h1 { font-size: 3rem; }
+  .profile-intro h1 { font-size: 2.25rem; }
 }
 
 @media (prefers-reduced-motion: reduce) {
