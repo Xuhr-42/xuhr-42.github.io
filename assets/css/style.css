@@ -190,13 +190,21 @@ main { min-height: calc(100vh - 160px); }
 .section-body > p { max-width: 650px; margin: 0; color: var(--muted); }
 .experience-list { display: grid; gap: .9rem; }
 .experience-entry {
-  display: grid;
-  grid-template-columns: 120px 1fr;
+  display: flex;
+  flex-wrap: nowrap;
   gap: 1rem;
   align-items: baseline;
 }
-.experience-entry time { color: var(--muted); font-size: .86rem; }
-.experience-entry p { margin: 0; }
+.experience-entry time {
+  flex: 0 0 112px;
+  white-space: nowrap;
+  color: var(--muted);
+  font-size: .86rem;
+}
+.experience-entry p {
+  min-width: 0;
+  margin: 0;
+}
 .simple-note {
   display: flex;
   justify-content: space-between;
