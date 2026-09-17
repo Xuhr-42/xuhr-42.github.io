@@ -1,0 +1,24 @@
+---
+layout: default
+title: Notes
+description: Mathematical notes and research reflections by Haoran Xu.
+---
+<section class="page-intro">
+  <p class="eyebrow"><span data-copy="en">Notebook</span><span data-copy="zh">开放笔记</span></p>
+  <h1><span data-copy="en">Notes & writing</span><span data-copy="zh">随笔与文章</span></h1>
+  <p><span data-copy="en">Expository notes, research reflections, and things worth remembering.</span><span data-copy="zh">记录数学学习、研究思考，以及值得反复阅读的内容。</span></p>
+</section>
+<section class="post-list">
+  {% for post in site.posts %}
+    <article class="post-row">
+      <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%Y.%m.%d" }}</time>
+      <div>
+        <h2><a href="{{ post.url | relative_url }}"><span data-copy="en">{{ post.title_en | default: post.title }}</span><span data-copy="zh">{{ post.title_zh | default: post.title }}</span></a></h2>
+        <p><span data-copy="en">{{ post.summary_en }}</span><span data-copy="zh">{{ post.summary_zh }}</span></p>
+        {% if post.tags %}<div class="tag-list">{% for tag in post.tags %}<span>{{ tag }}</span>{% endfor %}</div>{% endif %}
+      </div>
+      <a class="row-arrow" href="{{ post.url | relative_url }}" aria-label="Read article">↗</a>
+    </article>
+  {% endfor %}
+</section>
+
